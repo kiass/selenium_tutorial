@@ -1,5 +1,6 @@
 package com.kiass.selenium.pageObject;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -8,14 +9,17 @@ import org.openqa.selenium.WebDriver;
 public class SearchMavenResult {
     WebDriver selenium;
 
-    private WebDriver artifactDetailsDependencyInfo;
-    private WebDriver mavenDependecy;
-    private WebDriver groovyDependecy;
 
+    By dependencyMavenXml = By.id("dependencyMavenXml");
 
     public SearchMavenResult(WebDriver selenium) {
         this.selenium = selenium;
     }
 
+    public String getMavenConfigure() {
+        return selenium.findElement(dependencyMavenXml).getText();
+
+
+    }
 
 }
