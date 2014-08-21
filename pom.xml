@@ -20,7 +20,7 @@
                             <goal>java</goal>
                         </goals>
                         <configuration>
-                            <mainClass>com.kiass.selenium.SampleSelenium</mainClass>
+                            <mainClass>com.kiass.selenium.PageObjectSelenium</mainClass>
                         </configuration>
                     </execution>
                 </executions>
