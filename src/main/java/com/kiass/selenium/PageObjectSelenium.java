@@ -3,6 +3,7 @@ package com.kiass.selenium;
 import com.kiass.selenium.pageObject.SearchMavenHome;
 import com.kiass.selenium.pageObject.SearchMavenResult;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
 
 
 import java.util.concurrent.TimeUnit;
@@ -22,7 +23,7 @@ public class PageObjectSelenium {
 
 
         //open search maven page
-        SearchMavenHome searchMavenHome = new SearchMavenHome(firefoxDriver);
+        SearchMavenHome searchMavenHome = PageFactory.initElements(firefoxDriver, SearchMavenHome.class);
 
         //search maven library
         searchMavenHome.searchFor("selenium-java");
